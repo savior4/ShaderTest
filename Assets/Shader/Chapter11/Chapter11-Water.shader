@@ -1,5 +1,5 @@
 ﻿//模拟河流效果
-Shader "Unity Shaders Book/Chapter 7/Water"{
+Shader "Unity Shaders Book/Chapter 11/Water"{
     properties{
         _MainTex ("Main Tex", 2D) ="white"{}
         _Color("Color Tint",Color)=(1,1,1,1)
