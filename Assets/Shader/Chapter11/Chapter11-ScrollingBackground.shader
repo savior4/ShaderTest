@@ -14,7 +14,7 @@
             #pragma fragment frag 
 
             #include "UnityCG.cginc"
-            
+
             sampler2D _MainTex;
             float4 _MainTex_ST;
             sampler2D _DetailTex;
@@ -42,8 +42,9 @@
             }
 
             fixed4 frag(v2f i) : SV_TARGET{
-                fixed4 firstLayer = tex2D(_MainTex,i.uv.xy);
                 fixed4 secondLayer= tex2D(_DetailTex,i.uv.zw);
+                fixed4 firstLayer = tex2D(_MainTex,i.uv.xy);
+                
 
                 fixed4 c = lerp(firstLayer,secondLayer,secondLayer.a);
 
